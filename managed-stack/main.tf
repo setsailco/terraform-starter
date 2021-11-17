@@ -9,7 +9,7 @@ provider "spacelift" {}
 data "spacelift_current_stack" "this" {}
 
 resource "spacelift_environment_variable" "tf-vars" {
-  stack_id   = spacelift_stack.this.id
+  stack_id   = data.spacelift_stack.this.id
   name       = "TF_CLI_ARGS"
   value      = "-var-file=test.tfvars"
   write_only = false
