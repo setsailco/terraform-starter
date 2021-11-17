@@ -15,7 +15,7 @@ resource "random_password" "secret" {
 
 module "ec2-module" {
   source  = "spacelift.io/setsailco/ec2-module/default"
-  version = "0.0.1"
+  version = "0.0.2"
 
   # Required inputs 
   name = "test_spacelift"# string
