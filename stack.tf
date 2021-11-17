@@ -13,7 +13,7 @@ resource "spacelift_stack" "managed" {
 }
 
 resource "spacelift_aws_role" "k8s-core" {
-  stack_id = "spacelift_stack.managed.id"
+  stack_id = spacelift_stack.managed.id
   role_arn = "arn:aws:iam::961821348281:role/spacelift-demo-user"
 }
 
