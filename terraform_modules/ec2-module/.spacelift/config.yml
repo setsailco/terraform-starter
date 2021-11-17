@@ -5,7 +5,7 @@ runner_image: spacelift/runner:latest
 
 tests:
   - name: Test the module with 0.12.7
-    project_root: terraform-starter/terraform_modules/ec2-module
+    project_root: terraform_modules/ec2-module
     terraform_version: 0.12.7
     environment:
       TF_VAR_bacon: tasty
