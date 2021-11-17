@@ -15,19 +15,12 @@ data "spacelift_current_stack" "this" {}
 #  write_only = false
 #}
 
-variable "make" {
-    type = bool
-    default = false
-}
 
-
-module "ec2-module" {
-  count         = ! var.make ? 0 : 1
-  source  = "spacelift.io/setsailco/ec2-module/default"
-  version = "0.0.1"
-
-  # Required inputs 
-  name = "test_spacelift" # string
-
-}
-
+#module "ec2-module" {
+#  source  = "spacelift.io/setsailco/ec2-module/default"
+#  version = "0.0.1"
+#
+#  # Required inputs 
+#  name = "test_spacelift" # string
+#
+#}
