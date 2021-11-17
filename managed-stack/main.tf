@@ -4,6 +4,8 @@ provider "aws" {
   region = "us-east-1"
 }
 
+provider "spacelift" {}
+
 data "spacelift_current_stack" "this" {}
 
 resource "spacelift_environment_variable" "tf-vars" {
