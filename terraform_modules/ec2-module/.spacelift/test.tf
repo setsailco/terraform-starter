@@ -1,4 +1,4 @@
 module "ec2" {
     source = "../"
-    name = "module_test"
+    name   = "${ec2_spacelift_test}"
 }
