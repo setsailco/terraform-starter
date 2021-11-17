@@ -10,7 +10,7 @@ resource "random_password" "secret" {
 }
 
 module "ec2" {
-  source = "ec2-module"
+  source = "spacelift.io/setsailco/ec2-module/aws"
   version = "0.0.1"
   name = "test_spacelift"
 }
