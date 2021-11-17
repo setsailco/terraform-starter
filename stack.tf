@@ -27,6 +27,13 @@ resource "spacelift_environment_variable" "stack-plaintext" {
   write_only = false
 }
 
+resource "spacelift_environment_variable" "tf-vars" {
+  stack_id   = spacelift_stack.managed.id
+  name       = "TF_CLI_ARGS"
+  value      = "-var-file=test.tfvars"
+  write_only = false
+}
+
 # For another (secret) variable, let's create programmatically create a super
 # secret password.
 resource "random_password" "stack-password" {
