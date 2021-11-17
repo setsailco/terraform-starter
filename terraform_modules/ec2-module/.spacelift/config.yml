@@ -7,4 +7,4 @@ tests:
   - name: Test the module with 0.12.7
     terraform_version: 0.12.7
     environment:
-      name: ec2_module_test
+      TF_VAR_name: ec2_module_test
