@@ -15,14 +15,14 @@ data "spacelift_current_stack" "this" {}
 #  write_only = false
 #}
 
-resource "random_password" "secret" {
-  length  = 32
-  special = true
+variable "make" {
+    type = bool
+    default = false
 }
 
 
-
 module "ec2-module" {
+  count         = ! var.make ? 0 : 1
   source  = "spacelift.io/setsailco/ec2-module/default"
   version = "0.0.1"
 
