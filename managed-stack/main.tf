@@ -8,12 +8,12 @@ provider "spacelift" {}
 
 data "spacelift_current_stack" "this" {}
 
-resource "spacelift_environment_variable" "tf-vars" {
-  stack_id   = data.spacelift_stack.this.id
-  name       = "TF_CLI_ARGS"
-  value      = "-var-file=test.tfvars"
-  write_only = false
-}
+#resource "spacelift_environment_variable" "tf-vars" {
+#  stack_id   = data.spacelift_stack.this.id
+#  name       = "TF_CLI_ARGS"
+#  value      = "-var-file=test.tfvars"
+#  write_only = false
+#}
 
 resource "random_password" "secret" {
   length  = 32
@@ -29,6 +29,5 @@ module "ec2-module" {
   # Required inputs 
   name = var.name # string
 
-  depends_on = [spacelift_environment_variable.tf-vars]
 }
 
