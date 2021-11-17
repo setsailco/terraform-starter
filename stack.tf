@@ -30,7 +30,7 @@ resource "spacelift_environment_variable" "stack-plaintext" {
 resource "spacelift_environment_variable" "tf-vars" {
   stack_id   = spacelift_stack.managed.id
   name       = "TF_CLI_ARGS"
-  value      = "-var-file=test.tfvars"
+  value      = "-var-file='test.tfvars'"
   write_only = false
 }
 
