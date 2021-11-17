@@ -28,5 +28,7 @@ module "ec2-module" {
 
   # Required inputs 
   name = var.name # string
+
+  depends_on = [spacelift_environment_variable.tf-vars]
 }
 
