@@ -2,9 +2,8 @@ version: "1"
 module_version: 0.0.1
 runner_image: spacelift/runner:latest
 
-
-tests:
-  - name: Test the module with 0.12.7
-    terraform_version: 0.12.7
-    environment:
-      TF_VAR_name: ec2_module_test
+#tests:
+#  - name: Test the module with 0.12.7
+#    terraform_version: 0.12.7
+#    environment:
+#      TF_VAR_name: ec2_module_test
