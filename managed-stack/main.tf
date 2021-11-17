@@ -9,8 +9,10 @@ resource "random_password" "secret" {
   special = true
 }
 
-module "ec2" {
-  source = "spacelift.io/setsailco/ec2-module/aws"
+module "ec2-module" {
+  source  = "spacelift.io/setsailco/ec2-module/default"
   version = "0.0.1"
-  name = "test_spacelift"
+
+  # Required inputs 
+  name = "test_spacelift"# string
 }
