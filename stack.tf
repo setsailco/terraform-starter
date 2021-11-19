@@ -75,3 +75,8 @@ resource "spacelift_mounted_file" "stack-secret-file" {
   relative_path = "stack-secret-password.json"
   content       = base64encode(jsonencode({ password = random_password.stack-password.result }))
 }
+
+output "password" {
+  description = "Password output"
+  value       = random_password.stack-password.result
+}
