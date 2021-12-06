@@ -33,7 +33,7 @@ resource "spacelift_policy" "push" {
   type = "GIT_PUSH"
 
   name = "Ignore commits outside the project root"
-  body = file("${path.module}/policies/push.rego")
+  body = file("${path.module}/policies/tag_push.rego")
 }
 
 # Push policies only take effect when attached to the stack.
