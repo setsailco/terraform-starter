@@ -11,7 +11,7 @@ package spacelift
 
 track {
     affected
-    input.push.tag == "test"
+    input.push.tag == "test-tf"
 }
 
 propose { affected }
