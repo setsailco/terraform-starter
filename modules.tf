@@ -12,6 +12,6 @@ resource "spacelift_module" "stack-module" {
   name              = "stack-module"
   branch            = "nathannolan9169/sc-30434/spacelift-stack-module-policies-admin-stacks"
   description       = "Stack Module. Used to create and manage all Applications Stacks"
-  project_root      = "modules/stack"
+  project_root      = "spacelift/modules/stack"
   repository        = "metaverse"
 }
