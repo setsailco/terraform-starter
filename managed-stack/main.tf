@@ -21,3 +21,18 @@ module "ec2-module" {
   name = var.ec2_name# string
 }
 
+
+resource "spacelift_mounted_file" "managed" {
+  count         = var.use_tf_vars ? 1 : 0
+  stack_id      = spacelift_stack.this.id
+  relative_path = format("%s.tfvars", var.environment)
+  content       = filebase64(format("%s/%s", path.module, var.tf_vars_path))
+}
+
+resource "spacelift_environment_variable" "stack_tfvars" {
+  count      = var.use_tf_vars ? 1 : 0
+  stack_id   = spacelift_stack.this.id
+  name       = "TF_CLI_ARGS"
+  value      = format("-var-file=%s.tfvars", var.environment)
+  write_only = false
+}
