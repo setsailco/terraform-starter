@@ -1,0 +1,6 @@
+stacks:
+    # The key of is the immutable slug of your stack
+    # which you will find in the URL.
+    test-tf-stack: &shared
+        before_init:
+            - cp env/test.tfvars test.auto.tfvars
