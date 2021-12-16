@@ -22,6 +22,7 @@ module "ec2-module" {
 }
 
 
+
 resource "spacelift_mounted_file" "managed" {
   stack_id      = data.spacelift_current_stack.this.id
   relative_path = "test.tfvars"
