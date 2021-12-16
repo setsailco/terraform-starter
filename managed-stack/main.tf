@@ -18,7 +18,7 @@ module "ec2-module" {
   version = "0.0.2"
 
   # Required inputs
-  name = "spacelift_test" # string
+  name = var.ec2_name # string
 }
 
 
