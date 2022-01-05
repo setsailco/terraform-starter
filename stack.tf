@@ -10,6 +10,5 @@ module "stack-module" {
   repository_name = "terraform-starter"
   stack_name = "test-tf-stack"
   default_branch = "main"
-  import_existing_state = false
 
 }
