@@ -6,12 +6,3 @@ resource "spacelift_module" "ec2-module" {
   project_root      = "terraform_modules/ec2-module"
   repository        = "terraform-starter"
 }
-
-resource "spacelift_module" "stack-module" {
-  administrative    = true
-  name              = "stack-module"
-  branch            = "nathannolan9169/sc-30434/spacelift-stack-module-policies-admin-stacks"
-  description       = "Stack Module. Used to create and manage all Applications Stacks"
-  project_root      = "spacelift/global_management/modules/stack"
-  repository        = "metaverse"
-}
