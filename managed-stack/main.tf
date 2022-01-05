@@ -20,3 +20,4 @@ module "ec2-module" {
   # Required inputs
   name = var.ec2_name # string
 }
+
