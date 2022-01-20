@@ -9,6 +9,6 @@ provider "spacelift" {}
 data "spacelift_current_stack" "this" {}
 
 resource "random_password" "secret" {
-  length  = 32
+  length  = 33
   special = true
 }
